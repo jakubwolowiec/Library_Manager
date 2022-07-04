@@ -5,6 +5,7 @@ import com.ancomape.libraryManager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,6 +45,7 @@ public class BookResource {
     }
 
     @DeleteMapping("/delete/{id}")
+    @Transactional
     public ResponseEntity<?> deleteBook(@PathVariable("id") Long id){
          bookService.deleteBookById(id);
         return new ResponseEntity<>(HttpStatus.OK);
