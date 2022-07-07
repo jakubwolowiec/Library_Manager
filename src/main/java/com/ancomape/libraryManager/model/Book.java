@@ -14,7 +14,8 @@ public class Book implements Serializable {
     private Integer pages;
     private Integer yearOfRelease;
     private String imgUrl;
-    private Boolean isRead = false;
+    @Column(name = "isRead")
+    private boolean isRead = false;
     private Integer rating = 0;
 
 
@@ -23,14 +24,15 @@ public class Book implements Serializable {
     public Book() {
     }
 
-    public Book(Long id, String title, String author, Integer pages, Integer yearOfRelease, String imgUrl) {
+    public Book(Long id, String title, String author, Integer pages, Integer yearOfRelease, String imgUrl, boolean isRead, Integer rating) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.pages = pages;
         this.yearOfRelease = yearOfRelease;
         this.imgUrl = imgUrl;
-
+        this.isRead = isRead;
+        this.rating = rating;
     }
     public Long getId() {
         return id;
@@ -84,8 +86,8 @@ public class Book implements Serializable {
         return isRead;
     }
 
-    public void setRead(Boolean read) {
-        isRead = read;
+    public void setRead(boolean read) {
+        this.isRead = read;
     }
 
     public Integer getRating() {

@@ -17,19 +17,22 @@
 "author": "Margaret Atwood",
 "pages": "366",
 "yearOfRelease": "1986",
-"imgUrl": https://s.lubimyczytac.pl/upload/books/4913000/4913859/787267-352x500.jpg""
+"imgUrl": "https://s.lubimyczytac.pl/upload/books/4913000/4913859/787267-352x500.jpg",
+"read": "true"
 }
 {
 "title": "Malowany ptak",
 "author": "Jerzy Kosiński",
 "pages": "335",
 "yearOfRelease": "1976",
-"imgUrl": "https://s.lubimyczytac.pl/upload/books/4862000/4862754/690664-352x500.jpg"
+"imgUrl": "https://s.lubimyczytac.pl/upload/books/4862000/4862754/690664-352x500.jpg",
+"read": "true"
 }
 {
 "title": "Krótka historia czasu",
 "author": "Stephen Hawking",
 "pages": "295",
 "yearOfRelease": "1990",
-"imgUrl": "https://s.lubimyczytac.pl/upload/books/4808000/4808886/655586-352x500.jpg"
+"imgUrl": "https://s.lubimyczytac.pl/upload/books/4808000/4808886/655586-352x500.jpg",
+"read": "true"
 }
