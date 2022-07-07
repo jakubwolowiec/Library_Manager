@@ -2,7 +2,6 @@ package com.ancomape.libraryManager.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 
 @Entity
 public class Book implements Serializable {
@@ -12,21 +11,26 @@ public class Book implements Serializable {
     private Long id;
     private String title;
     private String author;
-    private int pages;
-    private int yearOfRelease;
+    private Integer pages;
+    private Integer yearOfRelease;
     private String imgUrl;
+    private Boolean isRead = false;
+    private Integer rating = 0;
+
+
 
 
     public Book() {
     }
 
-    public Book(Long id, String title, String author, int pages, int yearOfRelease, String imgUrl) {
+    public Book(Long id, String title, String author, Integer pages, Integer yearOfRelease, String imgUrl) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.pages = pages;
         this.yearOfRelease = yearOfRelease;
         this.imgUrl = imgUrl;
+
     }
     public Long getId() {
         return id;
@@ -56,7 +60,7 @@ public class Book implements Serializable {
         return pages;
     }
 
-    public void setPages(int pages) {
+    public void setPages(Integer pages) {
         this.pages = pages;
     }
 
@@ -64,7 +68,7 @@ public class Book implements Serializable {
         return yearOfRelease;
     }
 
-    public void setYearOfRelease(int yearOfRelease) {
+    public void setYearOfRelease(Integer yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
     }
 
@@ -76,6 +80,22 @@ public class Book implements Serializable {
         this.imgUrl = imgUrl;
     }
 
+    public Boolean getRead() {
+        return isRead;
+    }
+
+    public void setRead(Boolean read) {
+        isRead = read;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -85,6 +105,8 @@ public class Book implements Serializable {
                 ", pages=" + pages +
                 ", yearOfRelease=" + yearOfRelease +
                 ", imgUrl='" + imgUrl + '\'' +
+                ", isRead='" + isRead + '\'' +
+                ", rating='" + rating + '\'' +
                 '}';
     }
 }
