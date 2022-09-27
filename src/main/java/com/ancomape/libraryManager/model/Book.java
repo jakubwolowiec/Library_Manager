@@ -24,8 +24,8 @@ public class Book implements Serializable {
     public Book() {
     }
 
-    public Book(Long id, String title, String author, Integer pages, Integer yearOfRelease, String imgUrl, boolean isRead, Integer rating) {
-        this.id = id;
+    public Book( String title, String author, Integer pages, Integer yearOfRelease, String imgUrl, boolean isRead, Integer rating) {
+
         this.title = title;
         this.author = author;
         this.pages = pages;
@@ -36,10 +36,6 @@ public class Book implements Serializable {
     }
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTitle() {

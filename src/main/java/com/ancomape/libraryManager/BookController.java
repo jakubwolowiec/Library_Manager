@@ -12,13 +12,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/book")
-public class BookResource {
+public class BookController{
     private final BookService bookService;
 
     @Autowired
-    public BookResource(BookService bookService) {
+    public BookController(BookService bookService) {
         this.bookService = bookService;
     }
+
 
     @GetMapping("/all")
     public ResponseEntity<List<Book>> getAllBooks(){
